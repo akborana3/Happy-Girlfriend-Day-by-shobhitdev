@@ -1,32 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Girlfriend Day!</title>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Happy Girlfriend Day!</title> 
+    <link rel="stylesheet" href="./style.css" /> 
+    <script>
+        function countdownRedirect() {
+            var seconds = 10;
+            var countdown = setInterval(function() {
+                seconds--;
+                document.getElementById("countdown").textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    window.location.href = "https://akborana3.github.io/love/";
+                }
+            }, 1000);
+        }
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="tenor-gif-embed"
-        data-postid="253027946666209433"
-        data-share-method="host"
-        data-aspect-ratio="1.37853"
-        data-width="100%"
-      >
-        <a
-          href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433"
-          >Mochi Cat GIF</a
-        >from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
-      </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>Hehehehe, I knew it! Love u baby 😘</h1>
-    </div>
-  </body>
+        window.onload = countdownRedirect;
+    </script>
+</head> 
+<body> 
+    <div class="container"> 
+        <div 
+            class="tenor-gif-embed" 
+            data-postid="253027946666209433" 
+            data-share-method="host" 
+            data-aspect-ratio="1.37853" 
+            data-width="100%" 
+        > 
+            <a 
+                href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433" 
+            >Mochi Cat GIF</a> 
+            from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a> 
+        </div> 
+        <script 
+            type="text/javascript" 
+            async 
+            src="https://tenor.com/embed.js" 
+        ></script> 
+        <h1>Hehehehe, I knew it! Love u baby 😘</h1>
+        <h2>Babe i wrote a love letter for you let me show in <span id="countdown">10</span> seconds...</h2> 
+    </div> 
+</body> 
 </html>
